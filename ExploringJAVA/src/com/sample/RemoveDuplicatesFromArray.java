@@ -24,6 +24,7 @@ public class RemoveDuplicatesFromArray {
 			uniqueArray[i] = num;
 			i++;
 		}
+		System.out.println(set);
 		System.out.println("Removed Duplicates from Given Array: " + Arrays.toString(uniqueArray));
 		System.out.println("Removed Duplicates from Given Array: " + set);
 
