@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class RemoveDuplicatesFromArray {
 
 	public static void main(String[] args) {
-		int[] a = { 2, 5, 3, 6, 8, 2, 5, 4 };
+		int[] a = { 2, 5, 9, 3, 6, 8, 2, 5, 4 };
 		getRemoveDuplicatesFromArray(a);
 	}
 

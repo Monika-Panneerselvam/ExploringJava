@@ -43,7 +43,7 @@ public class DateFormatUnderstaning {
 
 		System.out.println("Using Parse Method from Date : " + formattedDate);
 
-		//Java 8+ , we are using DateTimeFormatter and its thread-safe
+		// Java 8+ , we are using DateTimeFormatter and its thread-safe
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yyyy HH:mm:ss z");
 		LocalDate localDate = LocalDate.parse(currentDate, formatter);
 		System.out.println("Using Parse Method from DateTimeFormatter : " + localDate);
