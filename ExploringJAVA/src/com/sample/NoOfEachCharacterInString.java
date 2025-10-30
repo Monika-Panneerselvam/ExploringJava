@@ -12,6 +12,7 @@ public class NoOfEachCharacterInString {
 		int[] arr = { 1, 1, 2, 2, 3, 3, 3, 4, 4, 5 };
 		getCountOfEachElementsFromString(input);
 		getCountOfEachElementsInIntOfArray(arr);
+		getFrequencyOfEachCharacterInStringUsingMapToObj(input);
 
 	}
 
@@ -25,6 +26,12 @@ public class NoOfEachCharacterInString {
 		Map<Integer, Long> countOfEachElementsInArray = Arrays.stream(arr).boxed()
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 		System.out.println("countOfEachElementsInArray: " + countOfEachElementsInArray);
+	}
+
+	static void getFrequencyOfEachCharacterInStringUsingMapToObj(String input) {
+		Map<Character, Long> map = input.chars().mapToObj(c -> (char) c)
+				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+		System.out.println("CountOfEachElementsFromStringUsingMapToObj: " + map);
 	}
 
 }
