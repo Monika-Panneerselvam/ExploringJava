@@ -6,8 +6,9 @@ import java.util.stream.IntStream;
 public class ReversingArrayInPlace {
 
 	public static void main(String[] args) {
-		int[] a = { 1, 2, 3, 4, 5, 6, 8, 9 };
+		int[] a = { 1, 2, 5, 6, 8, 9, 10 };
 		getReversingArrayInPlace(a);
+		getReversingArrayInPlaceUsingRangeClosed(a);
 	}
 
 	static void getReversingArrayInPlace(int[] arr) {
@@ -18,6 +19,11 @@ public class ReversingArrayInPlace {
 		});
 		System.out.println("Reversing Array In Place:" + Arrays.toString(arr));
 
+	}
+
+	static void getReversingArrayInPlaceUsingRangeClosed(int[] arr) {
+		IntStream.rangeClosed(1, arr.length).map(i -> arr[arr.length - i]).toArray();
+		System.out.println("Reversing Array In Place Using rangeClosed:" + Arrays.toString(arr));
 	}
 
 }

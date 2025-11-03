@@ -2,7 +2,7 @@ package com.sample;
 
 import java.util.Arrays;
 
-public class AddingIntegersInArray {
+public class SumAndAverageOfIntegersInArray {
 
 	public static void main(String[] args) {
 		String[] arr = { "1", "2", "3", "0", "#", "1" };
@@ -12,6 +12,7 @@ public class AddingIntegersInArray {
 		sumOfIntegersInArrayWithIntDataType(num);
 		sumOfIntegersInArrayUsingStreamsWithSumInBuiltFunction(num);
 		sumOfIntegersInArrayUsingStreamsWithReduceInBuiltFunction(num);
+		averageOfAllElementsFromAnArray(num);
 	}
 
 	static void sumOfIntegersInArrayWithStringDataType(String[] arr) {
@@ -49,6 +50,11 @@ public class AddingIntegersInArray {
 	static void sumOfIntegersInArrayUsingStreamsWithReduceInBuiltFunction(int[] arr) {
 		System.out.println("Sum of Integers from Given int of Array using Streams with reduce(): "
 				+ Arrays.stream(arr).reduce(0, (a, b) -> a + b));
+	}
+
+	static void averageOfAllElementsFromAnArray(int[] arr) {
+		System.out.println("Average of Integers from Given int of Array using Stream: "
+				+ Arrays.stream(arr).average().getAsDouble());
 	}
 
 }
