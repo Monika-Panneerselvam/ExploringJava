@@ -9,11 +9,12 @@ public class PrintWord1000TimesWithoutLoop {
 	
 	static void printWord1000TimesWithoutLoop(String s) {
 		String str = "i";
-		str = str.replaceAll("i", "iiiiiiiiiii");
-		str = str.replaceAll("i", "iiiiiiiiiii");
+		str = str.replaceAll("i", "iiiiiiiiii");
+		str = str.replaceAll("i", "iiiiiiiiii");
 		str = str.replaceAll("i", "iiiiiiiiii");
 		str = str.replaceAll("i", s+"\n");
 		System.out.println(str);
+		System.out.println(str.length());
 	}
 
 }
